@@ -1,24 +1,32 @@
 const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection.js');
-const User = require('./User');
+const User = require('./User.js');
 
-class Hotel extends Model{}
+class Flight extends Model{}
 
-Hotel.init (
+Flight.init(
     {
-        hotel_id: {
+        flight_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
+        airline: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        address: {
+        departing_from: {
             type: DataTypes.STRING,
-            allowNull: true,
+            allowNull: false,
+        },
+        destination: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        is_round_trip: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
         },
         price: {
             type: DataTypes.DECIMAL,
@@ -33,8 +41,8 @@ Hotel.init (
         timestamps: false,
         freezeTableName: true,
         underScored: true,
-        modelName: 'hotel',
-    }
+        modelName: 'flight',
+    },
 );
 
-module.exports = Hotel;
+module.exports = Flight;
