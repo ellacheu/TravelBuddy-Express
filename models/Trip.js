@@ -1,6 +1,6 @@
 const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection.js');
-const {User} = require('./User');
+const User = require('./User');
 
 class Trip extends Model{}
 
@@ -12,26 +12,31 @@ Trip.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        trip_name: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        trip_flight: {
+        flight: {
             type: DataTypes.STRING,
             allowNull: true,
         },
-        trip_activities: {
+        activity: {
             type: DataTypes.STRING,
             allowNull: true,
         },
-        trip_hotel: {
+        hotel: {
             type: DataTypes.STRING,
             allowNull: true,
         },
 
     },
-)
-
-Trip.belongsTo(User, {foreignKey: 'user_id'});
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underScored: true,
+        modelName: 'trip',
+    }
+);
 
 module.exports = Trip;

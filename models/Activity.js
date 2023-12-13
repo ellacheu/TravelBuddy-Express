@@ -1,24 +1,23 @@
 const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection.js');
-const User = require('./User');
+const User = require('./User.js');
 
-class Hotel extends Model{}
+class Activity extends Model{}
 
-Hotel.init (
+Activity.init(
     {
-        hotel_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
-        },
         name: {
             type: DataTypes.STRING,
             allowNull: false,
+            primaryKey: true,
         },
-        address: {
+        description: {
             type: DataTypes.STRING,
             allowNull: true,
+        },
+        location: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         price: {
             type: DataTypes.DECIMAL,
@@ -33,8 +32,8 @@ Hotel.init (
         timestamps: false,
         freezeTableName: true,
         underScored: true,
-        modelName: 'hotel',
+        modelName: 'activity',
     }
 );
 
-module.exports = Hotel;
+module.exports = Activity;

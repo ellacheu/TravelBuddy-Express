@@ -1,0 +1,44 @@
+const models = require('./models');
+
+const { User, Trip, Hotel, Flight, Activity} = models;
+
+
+User.hasMany(Trip, {
+    foreignKey: 'id',
+});
+
+Trip.belongsTo(User, {
+    foreignKey: 'id'
+});
+
+Trip.hasMany(Hotel, {
+    foreignKey: 'trip_id'
+});
+
+Trip.hasMany(Flight, {
+    foreignKey: 'flight_id'
+});
+
+Trip.hasMany(Activity, {
+    foreignKey: 'name'
+});
+
+Activity.belongsTo(Trip, {
+    foreignKey: 'trip_id'
+});
+
+Flight.belongsTo(Trip, {
+    foreignKey: 'trip_id'
+});
+
+Hotel.belongsTo(Trip, {
+    foreignKey: 'trip_id'
+});
+
+module.exports = {
+    User,
+    Trip,
+    Hotel,
+    Flight,
+    Activity
+};
