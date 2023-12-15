@@ -1,0 +1,76 @@
+:root {
+    --white: #fbf9f0;
+    --blue: #2EC0F9;
+    --darkBlue: #124559;
+}
+
+/* WELCOME PAGE CSS */
+
+.navbar {
+    padding: 0.5%;
+}
+
+#logo{
+    color: var(--darkBlue)
+}
+
+#login {
+    background: none;
+    color: var(--darkBlue);
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    padding: 1%;
+    border-radius: 10px;
+    margin: 0.5%;
+}
+
+#signup {
+    background-color: var(--darkBlue);
+    border: none;
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+.splash {
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#splashText {
+    text-align: center;
+    background-color: var(--darkBlue);
+    color: var(--white);
+    padding: 5%;
+    border-radius: 50px;
+}
+
+#startBtn {
+    margin-top: 2%;
+}
+
+#startBtn button {
+    border:  none;
+    text-decoration: none;
+    background-color: var(--darkBlue);
+    color: var(--white);
+    border-radius: 20px;
+    padding: 2%;
+}
+
+/* LOGIN CSS */
+
+.loginBody {
+    background-color: var(--darkBlue);
+}
+
+.logincontainer {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--white);
+}
