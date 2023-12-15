@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const {User, Trip, Hotel, Flight, Activity} = require('../models');
-const { route } = require('./api');
+//const {User, Trip, Hotel, Flight, Activity} = require('../models');
+//const { route } = require('./api');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         console.log(req);
     } catch(err) {
