@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const activitiesRoutes = require('./activityRoutes');
+const activityRoutes = require('./activityRoutes');
 const flightRoutes = require('./flightRoutes');
 const hotelRoutes = require('./hotelRoutes');
 const tripRoutes = require('./tripRoutes');
