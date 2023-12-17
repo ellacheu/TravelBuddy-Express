@@ -74,3 +74,68 @@
     border-radius: 10px;
     background-color: var(--white);
 }
+
+/* TRIP PAGE CSS */
+
+#mainContain {
+    display: flex;
+}
+
+#welcomeMessage {
+    margin: 5% 8%
+}
+
+#tripSelectContain {
+    display: flex;
+    flex-direction: column;
+    margin: 0% 8%;
+}
+
+#tripSelectContain button {
+    margin-bottom: 20%;
+    border: none;
+    padding: 2%;
+    border-radius: 10px;
+    min-width: 100px;
+}
+
+#flightContain,
+#hotelContain,
+#activityContain {
+    background-color: var(--blue);
+    padding: 2%;
+    border-radius: 20px;
+    margin-bottom: 2%;
+    color: var(--white);
+}
+
+.flightCard,
+.hotelCard,
+.activityCard {
+    padding: 2%;
+}
+
+.flightInfoLabel,
+.flightInfoData,
+.hotelInfoData,
+.hotelInfoLabel,
+.activityInfoLabel,
+.activityInfoData {
+    display: flex;
+    margin-left: 1%;
+}
+
+.flightInfoLabel p,
+.flightInfoData h5,
+.hotelInfoLabel p,
+.hotelInfoData h5,
+.activityInfoLabel p,
+.activityInfoData h5 {
+    margin: 0%;
+}
+
+.flightInfoLabel p,
+.hotelInfoLabel p,
+.activityInfoLabel p {
+    font-size: 15px;
+}
