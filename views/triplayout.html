@@ -14,6 +14,27 @@
             <a href="#" class="navbar-brand mr-2" id="logo">travel<span>buddy</span></a>
         </section>
         <section class="navbar-section">
+            <!-- <div class="dropdown">
+                <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">
+                  dropdown menu <i class="icon icon-caret"></i>
+                </a>
+                <ul class="menu">
+                    <li>Logout</li>
+                </ul>
+              </div> -->
+
+              <div class="dropdown">
+                  <a href="/api/:id" class="btn btn-link dropdown-toggle" tabindex="0">
+                   {{user.name}}<i class="icon icon-caret"></i>
+                  </a>
+                  <ul class="menu">
+                      <li class="menu-item">
+                          <a href="/login">
+                          <i class="icon icon-link"></i>logout
+                          </a>
+                      </li>
+                  </ul>
+              </div>
             <button id="login">login</button>
             <button id="signup">signup</button>
         </section>
