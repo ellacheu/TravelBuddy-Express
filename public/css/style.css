@@ -4,7 +4,7 @@
     --darkBlue: #124559;
 }
 
-/* WELCOME PAGE CSS */
+/* NAV CSS */
 
 .navbar {
     padding: 0.5%;
@@ -34,6 +34,8 @@
     padding: 1%;
     border-radius: 10px;
 }
+
+/* WELCOME PAGE CSS */
 
 .splash {
     margin-top: 10%;
@@ -65,14 +67,16 @@
 
 /* LOGIN CSS */
 
-.loginBody {
+.logincontainer {
+    margin-top: 10%;
+    border: none;
+    border-radius: 10px;
     background-color: var(--darkBlue);
 }
 
-.logincontainer {
-    border: none;
-    border-radius: 10px;
-    background-color: var(--white);
+.logincontainer h2,
+.logincontainer label {
+    color: var(--white);
 }
 
 /* TRIP PAGE CSS */

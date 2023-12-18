@@ -1,0 +1,13 @@
+<div class="splash">
+    <div id="splashText">
+        <h1>Welcome to Travel Buddy!</h1>
+        <h2>The best itinerary planner on the web</h2>
+    </div>
+    <div id="startBtn">
+        {{#if loggedIn}}
+        <a href="/api/:id">Get Started</a>
+        {{else}}
+        <a href="./login.html">Get Started</a>
+        {{/if}}
+    </div>
+</div>

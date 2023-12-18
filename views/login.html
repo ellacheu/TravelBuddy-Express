@@ -9,11 +9,32 @@
 </head>
 
 <body class="loginBody">
-    <main>
+    <header class="navbar">
+        <section class="navbar-section">
+            <a href="./homepage.html" class="navbar-brand mr-2" id="logo">travel<span>buddy</span></a>
+        </section>
+        <section class="navbar-section">
+              <div class="dropdown">
+                  <a href="./triplayout.html" class="btn btn-link dropdown-toggle" tabindex="0">
+                   {{user.name}}<i class="icon icon-caret"></i>
+                  </a>
+                  <ul class="menu">
+                      <li class="menu-item">
+                          <a href="/login">
+                          <i class="icon icon-link"></i>logout
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+            <a href="./login.html"id="loginBtn">login</a>
+            <a href="./login.html"id="signupBtn">signup</a>
+        </section>
+    </header>
 
-        <div class="logincontainer columns col-6">
-            <div id="form1"class="column form-horizontal">
-                <h2>login</h2>
+    <main>
+        <div class="logincontainer columns col-6 col-mx-auto">
+            <div id="loginForm"class="column form-horizontal">
+                <h2>Login</h2>
                 <form class="form-horizontal">
                     <div class="form-group">
                         <div class="col-3 col-sm-12">
@@ -37,7 +58,7 @@
             
             <div class="divider-vert" data-content="OR"></div>  
             
-            <div class="column">
+            <div id="signupForm" class="column">
                 <h2>Sign up</h2>
                 <form class="form-horizontal">
                     <div class="form-group">
@@ -67,7 +88,9 @@
                     <button class="btn btn-primary input-group-btn">Submit</button>
                 </form>
             </div>
+
+        </div>
             
-        </main>
+    </main>
 </body>
 </html>

@@ -1,0 +1,43 @@
+ <main>
+    <div id="welcomeMessage">
+        <h1>Welcome, {{Eric Sayer}}!</h1>
+    </div>
+
+    <div id="mainContain">
+        <div class="col-1" id="tripSelectContain">
+            {{if trips.length}}
+            {{#each}}
+            <a href="{{}}" id="{{}}">{{Trip 1}}</a>
+            {{/each}}
+            {{/if}}
+            <button>+ New Trip</button>
+        </div>
+
+        <div class="col-7" id="itinContain">
+            <div id="flightContain">
+                <h2>Flights</h2>
+                {{#each flight}}
+                {{> flightDetail flight}}
+                {{/each}}
+            </div>
+
+            <div id="hotelContain">
+                <h2>Hotels</h2>
+                <div class="hotelCard" id="hotel1">
+                    <h3>Tipton Hotel</h3>
+                    {{#each hotel}}
+                    {{> hotelDetail hotel}}
+                    {{/each}}
+                </div>
+            </div>
+
+            <div id="activityContain">
+                <h2>Activities</h2>
+                {{#each activity}}
+                {{> activityDetail activity}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+</main>

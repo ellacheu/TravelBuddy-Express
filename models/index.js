@@ -1,6 +1,11 @@
-const models = require('./models');
+// const models = require('./models');
+const User = require('./User.js')
+const Trip = require('./Trip.js')
+const Hotel = require('./Hotel.js')
+const Flight = require('./Flight.js')
+const Activity = require('./Activity.js')
 
-const { User, Trip, Hotel, Flight, Activity} = models;
+// const { User, Trip, Hotel, Flight, Activity} = models;
 
 
 User.hasMany(Trip, {
