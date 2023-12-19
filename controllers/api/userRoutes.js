@@ -16,6 +16,22 @@ router.post('/', async (req, res) => {
     }
 });
 
+router.get('/:id', async (req, res) => {
+    try {
+        const userId = req.params.id;
+        const userData = await User.findByPk(userId);
+        if(!userData) {
+            res.status(404).json({ message: 'User not found' });
+            return;
+        }
+
+        res.status(200).json(userData);
+    } catch (err){
+        console.error(err);
+        res.status(400).json(err);
+    }
+});
+
 router.post('/login', async (req, res) => {
     try {
         const userData = await User.findOne({ where: { email: req.body.email } });

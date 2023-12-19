@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <header class="navbar">
         <section class="navbar-section">
             <a href="#" class="navbar-brand mr-2" id="logo">travel<span>buddy</span></a>
@@ -17,3 +18,18 @@
             <button>Get Started</button>
         </div>
     </div>
+=======
+<div class="splash">
+    <div id="splashText">
+        <h1>Welcome to Travel Buddy!</h1>
+        <h2>The best itinerary planner on the web</h2>
+    </div>
+    <div id="startBtn">
+        {{#if loggedIn}}
+        <a href="/api/:id">Get Started</a>
+        {{else}}
+        <a href="./login.html">Get Started</a>
+        {{/if}}
+    </div>
+</div>
+>>>>>>> 83a5b1f69c0a9ada4e05ef9a4d2bbdc6ce4107ee
