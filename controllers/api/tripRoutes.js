@@ -18,7 +18,6 @@ router.get('/:name', async (req, res) => {
         const tripData = await Trip.findOne({ 
             where: { name: req.params.name },
             include: [{ model: Flight }, { model: Hotel }, { model: Activity }]
-
         });
 
         if(!tripData) {
