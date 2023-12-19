@@ -2,6 +2,8 @@ DROP DATABASE IF EXISTS travel_db;
 
 CREATE DATABASE travel_db;
 
+USE travel_db;
+
 CREATE TABLE user (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     name VARCHAR(50) NOT NULL,
