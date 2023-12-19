@@ -13,7 +13,7 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-    res.render('login');
+    res.render('login',{loggedIn:false});
 });
 
 module.exports = router;
