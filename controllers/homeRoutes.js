@@ -21,7 +21,7 @@ router.get("/login", (req, res) => {
 // find all trips
 router.get("/trips", async (req, res) => {
   try {
-    const tripData = await Trip.findall({
+    const tripData = await Trip.findAll({
       include: [
         {
           model: User,
@@ -67,7 +67,7 @@ router.get("/trips/:id", async (req, res) => {
 
 router.get("/triplayout", withAuth, async (req, res) => {
   try {
-    const userData = await User.findbyPk(req.session.user_id, {
+    const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
       include: [{ model: Trip }],
     });
