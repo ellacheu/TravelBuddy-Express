@@ -1,6 +1,6 @@
 <main>
     <div class="logincontainer columns col-6 col-mx-auto">
-        <div id="loginForm"class="column form-horizontal">
+        <div id="login-form"class="column form-horizontal">
             <h2>Login</h2>
             <form class="form-horizontal">
                 <div class="form-group">
@@ -8,7 +8,7 @@
                         <label class="form-label" for="email">Email</label>
                     </div>
                     <div class="col-6 col-sm-12">
-                        <input class="form-input" type="text" id="email" placeholder="email">
+                        <input class="form-input" type="text" id="email-login" placeholder="email">
                     </div>
                 </div>
                 <div class="form-group">
@@ -16,16 +16,16 @@
                         <label class="form-label" for="password">Password</label>
                     </div>
                     <div class="col-6 col-sm-12">
-                        <input class="form-input" type="text" id="password" placeholder="password">
+                        <input class="form-input" type="text" id="password-login" placeholder="password">
                     </div>
                 </div>
-                <button class="btn btn-primary input-group-btn">Submit</button>
+                <button class="btn btn-primary input-group-btn" type="submit">Submit</button>
             </form>
         </div>
             
         <div class="divider-vert" data-content="OR"></div>  
             
-        <div id="signupForm" class="column">
+        <div id="signup-form" class="column">
             <h2>Sign up</h2>
             <form class="form-horizontal">
                 <div class="form-group">
@@ -33,7 +33,7 @@
                         <label class="form-label" for="name">Name</label>
                     </div>
                     <div class="col-6 col-sm-12">
-                        <input class="form-input" type="text" id="name" placeholder="name">
+                        <input class="form-input" type="text" id="name-signup" placeholder="name">
                     </div>
                 </div>
                 <div class="form-group">
@@ -41,7 +41,7 @@
                         <label class="form-label" for="email">Email</label>
                     </div>
                     <div class="col-6 col-sm-12">
-                        <input class="form-input" type="text" id="email" placeholder="email">
+                        <input class="form-input" type="text" id="email-signup" placeholder="email">
                     </div>
                 </div>
                 <div class="form-group">
@@ -49,13 +49,15 @@
                         <label class="form-label" for="password">Password</label>
                     </div>
                     <div class="col-6 col-sm-12">
-                        <input class="form-input" type="text" id="password" placeholder="password">
+                        <input class="form-input" type="text" id="password-signup" placeholder="password">
                     </div>
                 </div>
-                <button class="btn btn-primary input-group-btn">Submit</button>
+                <button id="signup-btn" class="btn btn-primary input-group-btn" type="submit">Submit</button>
             </form>
         </div>
 
     </div>
             
 </main>
+
+<script src="./js/login.js"></script>
