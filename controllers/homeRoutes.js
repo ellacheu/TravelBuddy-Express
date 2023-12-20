@@ -21,7 +21,7 @@ router.get("/login", (req, res) => {
 // find all trips
 router.get("/trips", async (req, res) => {
   try {
-    const tripData = await Trip.findall({
+    const tripData = await Trip.findAll({
       include: [
         {
           model: User,
