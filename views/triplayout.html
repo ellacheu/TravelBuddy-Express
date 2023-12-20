@@ -49,7 +49,7 @@
             <div class="col-1" id="tripSelectContain">
                 <button>Trip 1</button>
                 <button>Trip 2</button>
-                <button>+ New Trip</button>
+                <button id="newTripBtn">+ New Trip</button>
             </div>
     
             <div class="col-7" id="itinContain">
@@ -136,7 +136,45 @@
             </div>
         </div>
 
+        <dialog  id="tripCreator">
+            <form>
+                <div id="modalHeader">
+                    <h2>Create your trip!</h2>
+                    <a href="#close" id="closeTripCreator"class="btn btn-clear" aria-label="Close"></a>
+                </div>
+    
+                <div class="tab">
+                    <p class="formTitle">Name your trip:</p>
+                    <input type="text" name="tripName" placeholder="Trip Name"/>
+                </div>
+    
+                <div class="tab">
+                    <p class="formTitle">Flights:</p>
+                    <div class="flightFormContain">
+                    </div>
+                    <div class="addInput">
+                        <button class="addFlightBtn">+</button>
+                        <p>Add New Flight</p>
+                    </div>
+                </div>
+    
+                <div class="tab">
+                    <p class="formTitle">Input your hotels:</p>
+                    <input type="text" name="tripName" placeholder="Trip Name"/>    
+                </div>
+    
+                <div class="tab">
+                    <p class="formTitle">Input your activities:</p>
+                    <input type="text" name="tripName" placeholder="Trip Name"/>
+                </div>
+
+                <input type="submit" name="submit" class="submitBtn" value="Submit"/>
+            </form>
+        </dialog>
+
     </main>
+
+    <script src="../public/js/modal.js"></script>
     
 </body>
 </html>
