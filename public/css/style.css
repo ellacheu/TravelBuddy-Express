@@ -59,6 +59,18 @@ body {
     font-weight: 700;
 }
 
+.profileBtn,
+.profile:visited,
+.profile:hover {
+    text-align: center !important;
+    padding: 1% !important;
+    font-family: var(--font2) !important;
+    font-weight: 700 !important;
+    color: var(--white) !important;
+    font-size: 20px !important;
+    text-decoration: none !important;
+}
+
 /* WELCOME PAGE CSS */
 
 .splash {
@@ -66,27 +78,46 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-family: var(--font2);
+    filter: drop-shadow(0px 5px #16262a);
+
 }
 
 #splashText {
     text-align: center;
-    background-color: var(--darkBlue);
+    background-color: var(--LBlue);
     color: var(--white);
-    padding: 5%;
+    padding: 3% 7%;
     border-radius: 50px;
+}
+
+#splashText h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+#splashText h2 {
+    font-size: 30px;
 }
 
 #startBtn {
     margin-top: 2%;
+    background-color: var(--orange);
+    border-radius: 10px;
+    padding: 0.5%;
 }
 
-#startBtn button {
-    border:  none;
-    text-decoration: none;
-    background-color: var(--darkBlue);
+.startBtn,
+.startBtn:visited,
+.startBtn:hover,
+.startBtn:active {
     color: var(--white);
-    border-radius: 20px;
-    padding: 2%;
+    text-decoration: none !important;
+    font-family: var(--font2);
+    font-weight: 700;
+    font-size: 20px;
+    border:none;
+    outline: none;
 }
 
 /* LOGIN CSS */
@@ -95,12 +126,39 @@ body {
     margin-top: 10%;
     border: none;
     border-radius: 10px;
-    background-color: var(--darkBlue);
+    background-color: var(--LBlue);
+    padding: 2%;
+    filter: drop-shadow(0px 5px #16262a);
+    display: flex;
+    justify-content: space-between;
 }
 
 .logincontainer h2,
 .logincontainer label {
     color: var(--white);
+    font-family: var(--font2);
+}
+
+.logincontainer h2 {
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.form-horizontal {
+    padding: 0;
+}
+
+.form-input {
+    border-radius: 10px;
+    border:none;
+}
+
+.input-group-btn {
+    background-color: var(--orange) !important;
+    border: none !important;
+    border-radius: 10px;
+    filter: drop-shadow(0px 2px #16262a);
+
 }
 
 /* TRIP PAGE CSS */
@@ -185,11 +243,12 @@ body {
 }
 
 #noTrips {
-    background-color: lightgrey;
+    background-color: rgb(187, 187, 187);
     text-align: center;
     color: #5e5e5e;
     border-radius: 20px;
     padding: 15% 0%;
+    filter: drop-shadow(0px 5px #16262a);
 }
 
 #mainContain h2 {
