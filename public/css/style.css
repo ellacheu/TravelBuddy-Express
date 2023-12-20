@@ -2,37 +2,61 @@
     --white: #fbf9f0;
     --blue: #2EC0F9;
     --darkBlue: #124559;
+
+    --LYellow: #FAE6B1;
+    --orange:  #FFA101;
+    --LBlue: #6ac2d0;
+    --DBlue: #31525B;
+
+    --font1: 'Acme', sans-serif;
+    --font3: 'Alegreya', serif;
+    --font2: 'Alegreya Sans', sans-serif;
+}
+
+body {
+    background-color: var(--DBlue);
 }
 
 /* NAV CSS */
 
 .navbar {
-    padding: 0.5%;
+    padding: 0.5% 1.5%;
 }
 
 #logo{
-    color: var(--darkBlue)
+    color: var(--white);
+    font-family: var(--font1);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#logo span {
+    color: var(--orange);
 }
 
 #loginBtn {
     background: none;
-    color: var(--darkBlue);
+    color: var(--white);
     border: none;
     text-decoration: none;
     text-align: center;
     padding: 1%;
     border-radius: 10px;
     margin: 0.5%;
+    font-family: var(--font2);
+    font-weight: 700;
 }
 
 #signupBtn {
-    background-color: var(--darkBlue);
+    background-color: var(--orange);
     border: none;
     color: var(--white);
     text-decoration: none;
     text-align: center;
     padding: 1%;
     border-radius: 10px;
+    font-family: var(--font2);
+    font-weight: 700;
 }
 
 /* WELCOME PAGE CSS */
@@ -86,7 +110,14 @@
 }
 
 #welcomeMessage {
-    margin: 5% 8%
+    margin: 5% 8%;
+}
+
+#welcomeMessage h1 {
+    color: var(--white);
+    font-family: var(--font2);
+    font-weight: 700;
+    font-size: 45px;
 }
 
 #tripSelectContain {
@@ -98,19 +129,25 @@
 #tripSelectContain button {
     margin-bottom: 20%;
     border: none;
-    padding: 2%;
+    padding: 2% 3%;
     border-radius: 10px;
     min-width: 100px;
+    background-color: var(--orange);
+    filter: drop-shadow(0px 5px #16262a);
+    color: var(--white);
+    font-family: var(--font2);
+    font-weight: 700;
 }
 
 #flightContain,
 #hotelContain,
 #activityContain {
-    background-color: var(--blue);
+    background-color: var(--LBlue);
+    filter: drop-shadow(0px 5px #16262a);
     padding: 2%;
     border-radius: 20px;
     margin-bottom: 2%;
-    color: var(--white);
+    color: var(--white);  
 }
 
 .flightCard,
@@ -127,6 +164,7 @@
 .activityInfoData {
     display: flex;
     margin-left: 1%;
+    
 }
 
 .flightInfoLabel p,
@@ -136,6 +174,8 @@
 .activityInfoLabel p,
 .activityInfoData h5 {
     margin: 0%;
+    font-family: var(--font2);
+
 }
 
 .flightInfoLabel p,
@@ -151,6 +191,19 @@
     border-radius: 20px;
     padding: 15% 0%;
 }
+
+#mainContain h2 {
+    font-family: var(--font2);
+    font-weight: 700;
+    font-size: 35px;
+}
+
+#itinContain h3 {
+    font-family: var(--font2);
+    font-weight: 700;
+    font-size: 28px;
+}
+
 
 /* MODAL CSS */
 
