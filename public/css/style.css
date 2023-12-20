@@ -144,6 +144,14 @@
     font-size: 15px;
 }
 
+#noTrips {
+    background-color: lightgrey;
+    text-align: center;
+    color: #5e5e5e;
+    border-radius: 20px;
+    padding: 15% 0%;
+}
+
 /* MODAL CSS */
 
 #tripCreator::backdrop {
