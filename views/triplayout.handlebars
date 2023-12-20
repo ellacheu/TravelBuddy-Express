@@ -13,6 +13,11 @@
         </div>
 
         <div class="col-7" id="itinContain">
+            {{if !trips.length}}
+            <div id="noTrips">
+                <h2>No trips created!</h2>
+            </div>
+            {{else}}
             <div id="flightContain">
                 <h2>Flights</h2>
                 {{#each flight}}
@@ -22,12 +27,9 @@
 
             <div id="hotelContain">
                 <h2>Hotels</h2>
-                <div class="hotelCard" id="hotel1">
-                    <h3>Tipton Hotel</h3>
-                    {{#each hotel}}
-                    {{> hotelDetail hotel}}
-                    {{/each}}
-                </div>
+                {{#each hotel}}
+                {{> hotelDetail hotel}}
+                {{/each}}
             </div>
 
             <div id="activityContain">
@@ -36,6 +38,7 @@
                 {{> activityDetail activity}}
                 {{/each}}
             </div>
+            {{/if}}
         </div>
     </div>
 
