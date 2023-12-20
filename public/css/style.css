@@ -143,3 +143,31 @@
 .activityInfoLabel p {
     font-size: 15px;
 }
+
+/* MODAL CSS */
+
+#tripCreator::backdrop {
+	background: rgb(255 255 255 / 40%);
+	z-index: 2;
+	backdrop-filter: blur(20px);
+}
+
+#tripCreator {
+    border: none;
+    border-radius: 20px;
+    padding: 2%;
+}
+
+#modalHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab {
+    display: flex;
+    align-content: start;
+}
+
+.tab p {
+    font-size: 25px;
+}
