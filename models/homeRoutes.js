@@ -37,7 +37,7 @@ router.get("/trips", async (req, res) => {
       logged_in: req.session.logged_in,
     });
   } catch (error) {
-    res.status(500).json(error.message);
+    res.status(500).json(error);
   }
 });
 
