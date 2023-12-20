@@ -22,7 +22,7 @@ Trip.hasMany(Flight, {
 });
 
 Trip.hasMany(Activity, {
-    foreignKey: 'name'
+    foreignKey: 'activity_id'
 });
 
 Activity.belongsTo(Trip, {
