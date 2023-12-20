@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Trip } = require("../models");
+const { User, Trip, Flight, Activity, Hotel } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", withAuth, async (req, res) => {
@@ -27,6 +27,7 @@ router.get("/trips", async (req, res) => {
           model: User,
           attributes: ["name"],
         },
+
       ],
     });
 

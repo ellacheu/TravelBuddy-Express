@@ -37,7 +37,7 @@ function addFlightInput() {
     <label for="flightTime">Flight Time: </label>
     <input type="time" name="flightTime" placeholder="Flight Time"/>
     <label for="origin">Origin: </label>
-    <input type="text" name="origin" placeholder="Origin (ex: MSP)"/>
+    <input id="flight-name" type="text" name="origin" placeholder="Origin (ex: MSP)"/>
     <label for="destination">Destination: </label>
     <input type="text" name="destination" placeholder="Destination (ex: MSP)"/>
     <label for="price">Price: </label>
@@ -49,4 +49,35 @@ function addFlightInput() {
 }
 
 addFlightInputBtn.addEventListener("click", addFlightInput)
+
+const tripFormHandler = async (event) => {
+    event.preventDefault();
+    console.log("This function is working")
+
+    const name = document.querySelector('#trip-name').value.trim();
+    const flight = document.querySelector('#flight-name').value.trim();
+    const activity = document.querySelector('#activity-name').value.trim();
+    const hotel = document.querySelector('#hotel-name').value.trim();
+    console.log(name);
+
+    if ( name && flight && activity && hotel) {
+
+        const response = await fetch('/api/trips', {
+            method: 'POST',
+            body: JSON.stringify({name, flight, activity, hotel}),
+            headers: { 'Content-Type': 'application/json'},
+        });
+
+        if (response.ok) {
+
+            document.location.replace('/triplayout');
+        } else {
+            alert(response.statusText);
+        }
+    }
+};
+
+const tripForm = document.querySelector('#trip-form');
+
+modal.addEventListener('submit', tripFormHandler);
 
