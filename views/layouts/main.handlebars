@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Alegreya+Sans:wght@400;500;700&family=Alegreya:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/d522fef776.js" crossorigin="anonymous"></script>
     <title>Travel Buddy</title>
 </head>
 
@@ -20,7 +21,7 @@
 
         <section class="navbar-section">
             {{#if logged_in}}
-            <a style="text-decoration:none;" class="profileBtn" href="/api/:id">profile</a>
+            <a style="text-decoration:none;" class="profileBtn" href="/triplayout">profile</a>
             <div class="dropdown">
                 <a href="/api/:id" class="btn btn-link dropdown-toggle" tabindex="0">
                  {{user.name}}<i class="icon icon-caret"></i>
