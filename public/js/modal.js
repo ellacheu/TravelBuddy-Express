@@ -1,6 +1,7 @@
 const openModal = document.querySelector("#newTripBtn");
 const closeModal = document.querySelector("#closeTripCreator");
 const modal = document.querySelector("#tripCreator");
+const modalForm = modal.querySelector("#trip-form");
 
 const removeInputBtn = document.querySelector(".removeBtn");
 const addFlightInputBtn = document.querySelector(".addFlightBtn");
@@ -58,7 +59,7 @@ const tripFormHandler = async (event) => {
     const flight = document.querySelector('#flight-name').value.trim();
     const activity = document.querySelector('#activity-name').value.trim();
     const hotel = document.querySelector('#hotel-name').value.trim();
-    console.log(name);
+    console.log(name, flight, activity, hotel);
 
     if ( name && flight && activity && hotel) {
 
@@ -67,7 +68,7 @@ const tripFormHandler = async (event) => {
             body: JSON.stringify({name, flight, activity, hotel}),
             headers: { 'Content-Type': 'application/json'},
         });
-
+        console.log(response)
         if (response.ok) {
 
             document.location.replace('/triplayout');
@@ -77,7 +78,5 @@ const tripFormHandler = async (event) => {
     }
 };
 
-const tripForm = document.querySelector('#trip-form');
-
-modal.addEventListener('submit', tripFormHandler);
+modalForm.addEventListener('submit', tripFormHandler);
 

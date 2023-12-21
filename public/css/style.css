@@ -195,12 +195,13 @@ body {
     margin: 0% 8%;
 }
 
-#tripSelectContain button {
+#tripSelectContain button,
+.tripBtns {
     margin-bottom: 20%;
     border: none;
     padding: 2% 3%;
     border-radius: 10px;
-    min-width: 100px;
+    min-width: 140px;
     background-color: var(--orange);
     filter: drop-shadow(0px 5px #16262a);
     color: var(--white);
