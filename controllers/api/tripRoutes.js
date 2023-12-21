@@ -5,6 +5,7 @@ router.post('/', async (req, res) => {
     try {
         const newTripData = await Trip.create({
             ...req.body,
+            id: req.session.user_id
         });
 
         res.status(200).json(newTripData);
@@ -12,6 +13,15 @@ router.post('/', async (req, res) => {
         res.status(400).json(err);
     }
 });
+
+router.get("/:trip_id"), async (req, res) => {
+    try {
+        ///idk somehting to pull a user's trip using trip_id and req.session.user_id
+        const tripData = await Trip.findOne({
+            where: { }
+        })
+    }
+}
 
 router.get('/:name', async (req, res) => {
     try {
