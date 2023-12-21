@@ -12,30 +12,32 @@ Flight.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        airline: {
+        date: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
-        departing_from: {
+        flight_num: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true
+        },
+        time: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        gate: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        origin: {
+            type: DataTypes.STRING,
+            allowNull: true,
         },
         destination: {
             type: DataTypes.STRING,
-            allowNull: false,
-        },
-        is_round_trip: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-        },
-        price: {
-            type: DataTypes.DECIMAL,
             allowNull: true,
-            validate: {
-                isDecimal: true,
-            },
         },
     },
+
     {
         sequelize,
         timestamps: false,

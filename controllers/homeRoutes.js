@@ -1,8 +1,8 @@
 const router = require("express").Router();
-const { User, Trip, Flight, Activity, Hotel } = require("../models");
+const { User, Trip } = require("../models");
 const withAuth = require("../utils/auth");
 
-router.get("/", async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     console.log(req);
 
@@ -21,13 +21,12 @@ router.get("/login", (req, res) => {
 // find all trips
 router.get("/trips", async (req, res) => {
   try {
-    const tripData = await Trip.findAll({
+    const tripData = await Trip.findall({
       include: [
         {
           model: User,
           attributes: ["name"],
         },
-
       ],
     });
 
@@ -38,14 +37,14 @@ router.get("/trips", async (req, res) => {
       logged_in: req.session.logged_in,
     });
   } catch (error) {
-    res.status(500).json(error.message);
+    res.status(500).json(error);
   }
 });
 
 // trip by id
 router.get("/trips/:id", async (req, res) => {
   try {
-    const tripData = await Trip.findByPk(req.params.id, {
+    const tripData = await Trip.findbyPk(req.params.id, {
       include: [
         {
           model: User,
@@ -68,14 +67,12 @@ router.get("/trips/:id", async (req, res) => {
 
 router.get("/triplayout", withAuth, async (req, res) => {
   try {
-    const userData = await User.findByPk(req.session.user_id, {
+    const userData = await User.findbyPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
       include: [{ model: Trip }],
     });
 
     const user = userData.get({ plain: true });
-
-    console.log(user)
 
     res.render("triplayout", {
       ...user,

@@ -12,7 +12,7 @@
             </a>
             {{/each}}
             {{/if}}
-            <button class="tripBtns">+ New Trip</button>
+            <button id="newTripBtn" class="tripBtns">+ New Trip</button>
         </div>
 
         <div class="col-7" id="itinContain">
@@ -23,23 +23,23 @@
             {{else}}
             <div id="flightContain">
                 <h2>Flights</h2>
-                {{!-- {{#each trips}}
-                {{> flightDetail flight}}
-                {{/each}} --}}
+                {{#each trips}}
+                {{> flightDetail}}
+                {{/each}}
             </div>
 
             <div id="hotelContain">
                 <h2>Hotels</h2>
-                {{!-- {{#each trips}}
-                {{> hotelDetail this.hotel}}
-                {{/each}} --}}
+                {{#each trips}}
+                {{> hotelDetail}}
+                {{/each}}
             </div>
 
             <div id="activityContain">
                 <h2>Activities</h2>
-                {{!-- {{#each trips}}
-                {{> activityDetail this.activity}}
-                {{/each}} --}}
+                {{#each trips}}
+                {{> activityDetail}}
+                {{/each}}
             </div>
             {{/unless}}
         </div>
@@ -54,27 +54,70 @@
 
             <div class="tab">
                 <p class="formTitle">Name your trip:</p>
+                <div>
+                    <label for="tripName">Trip Name:</label>
                 <input id="trip-name"type="text" name="tripName" placeholder="Trip Name"/>
-            </div>
-
-            <div class="tab">
-                <p class="formTitle">Flights:</p>
-                <div class="flightFormContain">
-                </div>
-                <div class="addInput">
-                    <button class="addFlightBtn">+</button>
-                    <p>Add New Flight</p>
                 </div>
             </div>
 
             <div class="tab">
-                <p class="formTitle">Input your hotels:</p>
-                <input id= "hotel-name" type="text" name="hotelName" placeholder="Trip Name"/>    
+                <p class="formTitle">Input your Flight:</p>
+                <div>
+                    <label for="flight-date">Flight Date:</label>
+                    <input id="flight-date" type="text" name="flight-date" placeholder="Flight Date" required/> 
+
+                    <label for="flight-time">Flight Time:</label>
+                    <input id="flight-time" type="text" name="fligh-time" placeholder="Flight Time" required/>
+
+                    <label for="flight-origin">Flight Origin:</label>
+                    <input id="flight-origin" type="text" name="fligh-origin" placeholder="Origin (ex: MSP)" required/>
+
+                    <label for="flight-dest">Flight Destination:</label>
+                    <input id="flight-dest" type="text" name="flight-dest" placeholder="Destination (ex: BOS)" required/> 
+
+                    <label for="flight-num">Flight Number:</label>
+                    <input id="flight-num" type="text" name="flight-num" placeholder="Flight Number" required/> 
+
+                    <label for="flight-gate">Flight Gate:</label>
+                    <input id="flight-gate" type="text" name="flight-gate" placeholder="Flight Gate" required/> 
+                </div>
+            </div>
+
+            <div class="tab">
+                <p class="formTitle">Input your Hotel:</p>
+                <div>
+                    <label for="hotel-name">Hotel Name:</label>
+                    <input id="hotel-name" type="text" name="hotelName" placeholder="Hotel Name"/>
+
+                    <label for="hotel-checkInD">Check-in Date</label>
+                    <input id="hotel-checkInD" type="text" name="checkInD" placeholder="Hotel Check In Date"/>
+
+                    <label for="hotel-checkInT">Check-in Time:</label>
+                    <input id="hotel-checkInT" type="text" name="checkInT" placeholder="Hotel Check In Time"/> 
+
+                    <label for="hotel-checkOutD">Check-Out Date</label>
+                    <input id="hotel-checkOutD" type="text" name="checkOutD" placeholder="Hotel Check Out Date"/>
+
+                    <label for="hotel-checkOutT">Check-Out Time:</label>
+                    <input id="hotel-checkOutT" type="text" name="checkOutT" placeholder="Hotel Check Out Time"/> 
+                </div>
             </div>
 
             <div class="tab">
                 <p class="formTitle">Input your activities:</p>
-                <input id="activity-name" type="text" name="activityName" placeholder="Trip Name"/>
+                <div>
+                    <label for="act-name">Activity Name:</label>
+                    <input id="act-name" type="text" name="actName" placeholder="Activity Name"/>
+
+                    <label for="act-date">Activity Date:</label>
+                    <input id="act-date" type="text" name="actDate" placeholder="Activity Date"/>
+
+                    <label for="act-time">Activity Time:</label>
+                    <input id="act-time" type="text" name="actTime" placeholder="Activity Time"/>
+
+                    <label for="act-loc">Activity Location:</label>
+                    <input id="act-loc" type="text" name="actLoc" placeholder="Activity Location"/>
+                </div>
             </div>
 
             <input type="submit" name="submit" class="submitBtn" value="Submit"/>

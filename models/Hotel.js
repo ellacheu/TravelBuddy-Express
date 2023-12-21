@@ -16,17 +16,24 @@ Hotel.init (
             type: DataTypes.STRING,
             allowNull: false,
         },
-        address: {
+        checkIn_date: {
             type: DataTypes.STRING,
             allowNull: true,
         },
-        price: {
-            type: DataTypes.DECIMAL,
+        checkIn_time: {
+            type: DataTypes.STRING,
             allowNull: true,
-            validate: {
-                isDecimal: true,
-            },
+
         },
+        checkOut_date: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        checkOut_time: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+
     },
     {
         sequelize,
