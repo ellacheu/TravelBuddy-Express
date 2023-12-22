@@ -23,25 +23,71 @@
             {{else}}
             <div id="flightContain">
                 <h2>Flights</h2>
-                {{#each trips}}
-                {{> flightDetail}}
-                {{/each}}
+                <div class="flightCard" id="{{flight1}}">
+                    <i class="itemIcon fa-solid fa-plane"></i>
+
+                    <div class="div2">
+                        <h3>UTAH to NEW YORK</h3>
+                        <div class="flightInfoLabel">
+                            <p class="col-3">DATE</p>
+                            <P class="col-3">TIME</P>
+                            <p class="col-3">FLIGHT</p>
+                            <p class="col-3">GATE</p>
+                        </div>
+                        <div class="flightInfoData">
+                            <h5 class="col-3">12/21/23</h5>
+                            <h5 class="col-3">8:00AM</h5>
+                            <h5 class="col-3">A123</h5>
+                            <h5 class="col-3">B2</h5>
+                        </div>
+                    </div>
+                </div>
 
                 {{!-- {{trips[0].hotel}} --}}
             </div>
 
             <div id="hotelContain">
                 <h2>Hotels</h2>
-                {{#each trips}}
-                {{> hotelDetail}}
-                {{/each}}
+                <div class="hotelCard" id="{{hotel1}}">
+                    <i class="itemIcon fa-solid fa-bed"></i>
+                    <div class="div2">
+                        <h3>Ritz</h3>
+                        <div class="hotelInfoLabel">
+                            <p class="col-3">CHECK-IN DATE</p>
+                            <P class="col-3">CHECK-IN TIME</P>
+                            <p class="col-3">CHECK-OUT DATE</p>
+                            <p class="col-3">CHECK-OUT TIME</p>
+                        </div>
+                        <div class="hotelInfoData">
+                            <h5 class="col-3">12/22/23</h5>
+                            <h5 class="col-3">1:00pm</h5>
+                            <h5 class="col-3">12/23/23</h5>
+                            <h5 class="col-3">11:00am</h5>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <div id="activityContain">
                 <h2>Activities</h2>
-                {{#each trips}}
-                {{> activityDetail}}
-                {{/each}}
+                <div class="activityCard" id="{{activity1}}">
+                    <i class="itemIcon fa-solid fa-person-walking"></i>
+                    
+                    <div class="div2">
+                        <h3>WoW Meet Up</h3>
+                        <div class="activityInfoLabel">
+                            <p class="col-3">DATE</p>
+                            <P class="col-3">TIME</P>
+                            <p class="col-3">LOCATION</p>
+                        </div>
+                        <div class="activityInfoData">
+                            <h5 class="col-3">12/22/23</h5>
+                            <h5 class="col-3">4:00pm</h5>
+                            <h5 class="col-3">The Ritz Lobby</h5>
+                        </div>
+                    </div>
+                </div>
             </div>
             {{/unless}}
         </div>
