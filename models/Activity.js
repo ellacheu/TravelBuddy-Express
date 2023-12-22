@@ -16,7 +16,7 @@ Activity.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        description: {
+        date: {
             type: DataTypes.STRING,
             allowNull: true,
         },
@@ -24,12 +24,9 @@ Activity.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        price: {
-            type: DataTypes.DECIMAL,
+        time: {
+            type: DataTypes.STRING,
             allowNull: true,
-            validate: {
-                isDecimal: true,
-            },
         },
     },
     {
