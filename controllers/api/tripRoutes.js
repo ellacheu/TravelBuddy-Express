@@ -8,6 +8,7 @@ router.post('/', async (req, res) => {
             id: req.session.user_id
         });
 
+        console.log(newTripData);
         res.status(200).json(newTripData);
     } catch (err) {
         res.status(400).json(err);
@@ -16,7 +17,6 @@ router.post('/', async (req, res) => {
 
 router.get("/:trip_id", async (req, res) => {
     try {
-        ///idk somehting to pull a user's trip using trip_id and req.session.user_id
         const tripId = req.params.trip_id;
 
         const tripData = await Trip.findByPk(tripId, {

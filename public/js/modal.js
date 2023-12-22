@@ -50,24 +50,24 @@ const tripFormHandler = async (event) => {
             const newData = await Promise.all([
                 fetch('/api/trips', {
                     method: 'POST',
-                    body: JSON.stringify({name: tripName, flight: flightNum, activity: actName, hotel: hotelName}),
-                    headers: { 'Content-Type': 'application/json'},
-                }),
-                fetch('/api/flights', {
-                    method: 'POST',
-                    body: JSON.stringify({date: flightDate, flight_num: flightNum, time: flightTime, gate: flightGate, origin: flightOrigin, destination: flightDest}),
-                    headers: { 'Content-Type': 'application/json'},
-                }),
-                fetch('/api/hotels', {
-                    method: 'POST',
-                    body: JSON.stringify({name: hotelName, checkIn_date: hotelCheckInD, checkIn_time: hotelCheckInT, checkOut_date: hotelCheckOutD, checkOut_time: hotelCheckOutT}),
-                    headers: { 'Content-Type': 'application/json'},
-                }),
-                fetch('/api/activities', {
-                    method: 'POST',
-                    body: JSON.stringify({name: actName, date: actDate, location: actLoc, time: actTime}),
+                    body: JSON.stringify({name: tripName, flight: flightNum, activity: actName, hotel: hotelName, date: flightDate, flight_num: flightNum, time: flightTime, gate: flightGate, origin: flightOrigin, destination: flightDest, name: hotelName, checkIn_date: hotelCheckInD, checkIn_time: hotelCheckInT, checkOut_date: hotelCheckOutD, checkOut_time: hotelCheckOutT, name: actName, date: actDate, location: actLoc, time: actTime}),
                     headers: { 'Content-Type': 'application/json'},
                 })
+                // fetch('/api/flights', {
+                //     method: 'POST',
+                //     body: JSON.stringify({date: flightDate, flight_num: flightNum, time: flightTime, gate: flightGate, origin: flightOrigin, destination: flightDest}),
+                //     headers: { 'Content-Type': 'application/json'},
+                // }),
+                // fetch('/api/hotels', {
+                //     method: 'POST',
+                //     body: JSON.stringify({name: hotelName, checkIn_date: hotelCheckInD, checkIn_time: hotelCheckInT, checkOut_date: hotelCheckOutD, checkOut_time: hotelCheckOutT}),
+                //     headers: { 'Content-Type': 'application/json'},
+                // }),
+                // fetch('/api/activities', {
+                //     method: 'POST',
+                //     body: JSON.stringify({name: actName, date: actDate, location: actLoc, time: actTime}),
+                //     headers: { 'Content-Type': 'application/json'},
+                // })
             ]);
             if(newData) {
                 console.log(newData);   
